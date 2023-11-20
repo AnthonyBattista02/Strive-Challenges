@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 3.5vw;
+    position: fixed;
+    top: 100px;
+    left: 0vw;
+    border: gray 1px solid;
+    font-size: 1.5vw;
+}
+#ux {
+    border: gray solid 2px;
+    width: 8.5vw;
+    height: 2.25vw;
+    margin-top: .4vw;
+}
+#se {
+    border: gray solid 2px;
+    width: 8.5vw;
+    height: 2.25vw;
+    margin-top: .4vw;
+}
+#ch {
+    border: gray solid 2px;
+    width: 8.5vw;
+    height: 2.25vw;
+    margin-top: .4vw;
+}

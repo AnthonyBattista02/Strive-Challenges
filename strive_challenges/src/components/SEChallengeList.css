@@ -1,0 +1,22 @@
+
+.challengeDisplay {
+    display: flex;
+    flex-direction: row;
+    height: 9vw;
+    justify-content: center;
+}
+.details {
+    border: 2px solid black;
+    width: 60vw;
+    line-height: 9vw;
+    text-align: start;
+    padding-left: 10px;
+}
+.isCompleted {
+    border: 2px solid black;
+    width: 15vw;
+    line-height: 9vw;
+}
+h2 {
+    padding-top: 30px;
+}
