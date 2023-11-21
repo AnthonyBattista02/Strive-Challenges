@@ -27,7 +27,7 @@ export default function UXChallengeList () {
             <div className="today">
                 <div className="challengeDisplay">
                     <div className="details">
-                        Javascript Practice #1
+                    WireFrame practice #1
                     </div>
                     <div className='seChallengeBox'>
                         SE CHALLENGE
