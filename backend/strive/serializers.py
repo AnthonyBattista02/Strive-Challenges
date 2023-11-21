@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Sei, challenge_prompt, feedback
+from .models import Sei, challenge_prompt, feedback, Ux
 
 class FeedbackSerializer(serializers.ModelSerializer):
     class Meta:
@@ -19,4 +19,11 @@ class SeiSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Sei
+        fields = '__all__'
+
+class UxSerializer(serializers.ModelSerializer):
+    challenge_prompt = ChallengePromptSerializer()
+
+    class Meta:
+        model = Ux
         fields = '__all__'
