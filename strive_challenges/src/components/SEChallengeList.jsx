@@ -1,9 +1,24 @@
 import './ChallengeList.css'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
+import { BASE_URL } from '../global'
+import { useEffect, useState } from 'react'
 
 export default function SEChallengeList () {
+    const [seiPrompts, setSeiPrompts] = useState([])
 
+    useEffect(() => {
+        const getSeiPrompts = async () => {
+            const response = await axios.get(`${BASE_URL}challenge_prompts/`)
+            setSeiPrompts(response.data)
+            console.log(response)
+        }
+        getSeiPrompts()
+    }, [])
 
+    console.log(seiPrompts[2])
+
+    if (seiPrompts.length < 1) return <h1>Loading...</h1>
     return(
         <div className="seChallengeList">
             <div className='designChallenge'>
@@ -27,7 +42,7 @@ export default function SEChallengeList () {
             <div className="today">
                 <div className="challengeDisplay">
                     <div className="details">
-                        Javascript Practice #1
+                        {seiPrompts[2].name}
                     </div>
                     <div className='seChallengeBox'>
                         SE CHALLENGE
