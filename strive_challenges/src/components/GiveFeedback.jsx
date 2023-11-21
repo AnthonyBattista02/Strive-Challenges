@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useFeedbackContext } from '../FeedbackContext';  
+import { useFeedbackContext } from './FeedbackContext';  
 import { Link } from 'react-router-dom';
 
 const GiveFeedback = () => {
