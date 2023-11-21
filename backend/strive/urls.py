@@ -9,4 +9,7 @@ urlpatterns = [
     path('challenge_prompts/<int:pk>', views.Challenge_romptDetail.as_view(), name='challenge_prompts_detail'),
     path('feedback/', views.FeedbackList.as_view(), name='feedback_list'),
     path('feedback/<int:pk>', views.FeedbackDetail.as_view(), name='feedback_detail'),
+    path('ux/', views.UxList.as_view(), name='ux_list'),
+    path('ux/<int:pk>', views.UxDetail.as_view(), name='ux_detail'),
+    
 ]

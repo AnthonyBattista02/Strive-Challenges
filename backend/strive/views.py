@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import generics
-from .serializers import SeiSerializer, ChallengePromptSerializer, FeedbackSerializer
-from .models import Sei, challenge_prompt, feedback
+from .serializers import SeiSerializer, ChallengePromptSerializer, FeedbackSerializer, UxSerializer
+from .models import Sei, challenge_prompt, feedback, Ux
 # Create your views here.
 
 class SeiList(generics.ListCreateAPIView):
@@ -27,3 +27,11 @@ class FeedbackList(generics.ListCreateAPIView):
 class FeedbackDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = feedback.objects.all()
     serializer_class = FeedbackSerializer
+
+class UxList(generics.ListCreateAPIView):
+    queryset = Ux.objects.all()
+    serializer_class = UxSerializer
+
+class UxDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Ux.objects.all()
+    serializer_class = UxSerializer

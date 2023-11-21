@@ -18,5 +18,7 @@ class challenge_prompt(models.Model):
         return self.name
     
 class Sei(models.Model):
-    challenge_prompt = models.ForeignKey(challenge_prompt, on_delete = models.CASCADE, related_name = 'prompts')
+    challenge_prompt = models.ForeignKey(challenge_prompt, on_delete = models.CASCADE, related_name = 'sei_prompts')
 
+class Ux(models.Model):
+    challenge_prompt = models.ForeignKey(challenge_prompt, on_delete = models.CASCADE, related_name = 'ux_prompts')
